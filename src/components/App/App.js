@@ -2,7 +2,7 @@ import './App.css';
 
 import Planets from '../Planets';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>Star Wars Planets</h1>
