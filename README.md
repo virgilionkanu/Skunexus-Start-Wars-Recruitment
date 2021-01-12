@@ -36,6 +36,7 @@ No mockups but would be great if you make that app pretty :)
 ## Must-have
 * React & Redux
 * PropTypes
+* Reactstrap
 * Usage of react-router for multiple pages
 
 ## Good to have
