@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 import './Grid.css';
 
-function Grid({data: {header = [], values = [], actions = []}}) {
+function Grid({ data: { header = [], values = [], actions = [] } }) {
   return (
     <table className='gridTable'>
       <thead>
@@ -13,9 +15,9 @@ function Grid({data: {header = [], values = [], actions = []}}) {
         {values.map((row, index) => (
           <tr key={index}>
             {header.map((colName) => <td key={colName}>{row[colName]}</td>)}
-            {!!actions.length && 
+            {!!actions.length &&
               <td className='gridActions'>
-                {actions.map(({label, action}) => <button onClick={() => action(row)}>{label}</button>)}
+                {actions.map(({ label, action }) => <button onClick={() => action(row)}>{label}</button>)}
               </td>
             }
           </tr>
@@ -23,6 +25,10 @@ function Grid({data: {header = [], values = [], actions = []}}) {
       </tbody>
     </table>
   );
+}
+
+Grid.propTypes = {
+  data: PropTypes.object
 }
 
 export default Grid;
