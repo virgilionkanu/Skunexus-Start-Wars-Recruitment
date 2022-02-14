@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './Planets.css';
-import Grid from '../Grid';
+import GridHome from '../GridHome';
 import { findAllPlanets } from '../../services/resource/planets';
 
 function Planets() {
 
   const [values, setValues] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function onFindAllPlanets() {
@@ -34,18 +36,28 @@ function Planets() {
     actions: [
       {
         label: 'Go to Films',
-        action: (row) => { console.log(`redirect to grid with ${row.films.length} Films`) }
+        action: (row) => {
+          navigate('/films', { state: row.films })
+        }
       },
       {
         label: 'Go to Residents',
-        action: (row) => { console.log(`redirect to grid with ${row.residents.length} Residents`) }
+        action: (row) => {
+          navigate('/residents', { state: row.residents })
+        }
+      },
+      {
+        label: 'Details',
+        action: (row) => {
+          navigate('/planetDetail', { state: row.url })
+        }
       }
     ]
   }
 
   return (
     <div className='App'>
-      <Grid data={dataForGrid} />
+      <GridHome data={dataForGrid} />
     </div>
   );
 }
