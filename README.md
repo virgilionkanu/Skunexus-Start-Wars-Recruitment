@@ -3,7 +3,7 @@
 ## Introduction
 
 Fork/Copy starting application from [https://github.com/MaciejDonarski/Skunexus-Start-Wars-Recruitment/tree/master](https://github.com/MaciejDonarski/Skunexus-Start-Wars-Recruitment/tree/master).
-At the start you have a simple application which displays planets from Star Wars in grid. Your task is to upgrade it respecting the principles from Tech Stack, Must-have (Good to have and paying attention also)
+At the start you have a simple application which displays planets from Star Wars in GridHome. Your task is to upgrade it respecting the principles from Tech Stack, Must-have (Good to have and paying attention also)
 
 ## The Task
 1. Replace dummy data with dynamic data from [https://swapi.dev/api/planets/](https://swapi.dev/api/planets/)
