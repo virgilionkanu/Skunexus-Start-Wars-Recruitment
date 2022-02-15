@@ -35,6 +35,12 @@ function Planets() {
     values,
     actions: [
       {
+        label: 'Details',
+        action: (row) => {
+          navigate('/planetDetail', { state: row.url })
+        }
+      },
+      {
         label: 'Go to Films',
         action: (row) => {
           navigate('/films', { state: row.films })
@@ -44,12 +50,6 @@ function Planets() {
         label: 'Go to Residents',
         action: (row) => {
           navigate('/residents', { state: row.residents })
-        }
-      },
-      {
-        label: 'Details',
-        action: (row) => {
-          navigate('/planetDetail', { state: row.url })
         }
       }
     ]

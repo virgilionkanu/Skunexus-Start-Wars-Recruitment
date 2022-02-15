@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
 import './PlanetsDetails.css';
-import GridFilmsResidents from '../GridFilmsResidents';
+import GridPages from '../GridPages';
 
 function PlanetsDetails() {
   const { state } = useLocation();
@@ -36,7 +36,7 @@ function PlanetsDetails() {
   return (
     <div className='App'>
       <h1>Planet Details</h1>
-      <GridFilmsResidents data={dataForGrid} />
+      <GridPages data={dataForGrid} />
     </div>
   );
 }
